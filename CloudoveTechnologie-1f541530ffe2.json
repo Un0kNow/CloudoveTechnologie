@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cloudove-technologie",
+  "private_key_id": "1f541530ffe295701dec78ec47fdd4fce531e50b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqRF6bY8J2paXp\npzyjZLZFHA0I7D93DU0FVonBuq5CuOLVnDnH2Th1ARfR1rThRy1eHJL9J5/TToXj\n0/6JH0m43uoSUsEp6fy5XQun8cfWu3VAcP3wiRb57owdAABAVPbWNbXlT7u/XVHr\n5giHPV6waF7l8XvvGBzRs3lGi4+6NFChVUxgfjwTY8A521EJck4+AmC2rta9q2eD\n9LQ65ssOlbHLV75CKTWaCFcQQJp9XUTJCwlQqX1ZPCe3SvEALoxTp6Grjruf1X3/\nMRIaNPv6CopP3DAg/FOcN0WMqZrqWgee5JnswRD4avLa2dzLYNQ/HIv29iMffrYX\n/yU2vnVpAgMBAAECggEAFLCZfRu341T+U+XXhNSrIBC9i2pcd+oCLvY0vSQjIsZ2\nrJWpoR2bMlSUrBIBXtKYXQmZ2ZtOsjhQ0BN6/aHzV7yhXY1NcvtqPgK5dN9OH6DI\nfwZ778D+LWwNqJnPGKzPuyNBsYC+hA13SUllmzwbh9IsSJgkgt7qOZfWfSUJAmDq\n6c8q5kliEfGA4M5SNndR7yqbLagpSVBLysCP7fhH4hNRZX6u1hIqV603yvTrleZU\nZf3QzczjLOA5HFSARojsBGsgwh5yzOZc5Sh8/j+6lICa0k7vO/V79BaqHpbdMmq1\n8d0ujSJk579jsRslRu1R9oDvDT6U8a20+SvQdlrslQKBgQDaggK05YI8tnMpXQNC\nPzJTw2WjES3PZcDh/2A1vEEuFrLFSr2YCQIrHwrS2PpMD6qUc+wgYWkufMqj2Efn\nFqtF6E97nydQKrIt7rmP/JtJpQRKHJ+w2DY9YFn7dLON+lD02y4s2uSM5Ty1xtMC\n3XVWr1q4yByjnQ6RNdxHKEbw9wKBgQDHe2Ac9RkRRMIfZfCz0t6Nb0/IbaqNa3lq\n9rgXCCOpjt6k2t2UukhtZhPPigGXyp0GBf3pyx5Jo78a80P/PRCJ+rB66qpcbGkQ\nwIoga/L4trXM5S7W0j02RpTQoIzM+sD1TOAgo0qoVL+9GYzmA5EsqpzyQzA4z+ZS\n7lkI06CUnwKBgFkXQ0VAgp6AgWnvC6IaJEn01F7tZTE3urIqrq6aKDVDefZpJ+5y\nVdkBGien4j3a8WD/9tmo/fq/VNwDFiYJnyGsu6Oa26ubDPUfbbdgdmxLhPk2vIGd\nVlgmDeoxxffwhMuhBi2xvhgYa21uOKDlbK9AZgwLQ2oOYl8gh8TXjj03AoGBAJbv\nr0W53oHGeOuxAnPN9j8mHkQVVpsy2ugoThp/Ohyt0aEDSe2jFfJQ7mR2k8X6tN09\n42XnHr+xeoQ11RlnZwBAAxC+RrEwBj96sAjgJTQza1PhhZNd+Jr8xNUm5eKjSSVS\nSbPoWjEMDxhSIN5ZjJszbRWR6QbTp/7QAeY/2p0ZAoGBAL+nKFfFyUIGaamtcrCw\nSDFh88DijKJsnoAu3MHzf091jEF57UmZqMFmgrTd3RdM3qB1qI1bnzCfveMvqnoC\nlGNHiQEY4Eo029a2Ttgv5vVpATsYatipZLKZp+jIttCA/5hho/VlD/GlEwUGtCs6\n+Yiep8NKP6YL4mOi7lKJZaUz\n-----END PRIVATE KEY-----\n",
+  "client_email": "tester@cloudove-technologie.iam.gserviceaccount.com",
+  "client_id": "117078181035701353070",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tester%40cloudove-technologie.iam.gserviceaccount.com"
+}
