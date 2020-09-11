@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Historia</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="src/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="src/css/main.css" rel="stylesheet">
+
+    <!-- FontAwesone Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.1/css/fileinput.min.css" media="all"
+          rel="stylesheet" type="text/css"/>
+    <!-- if using RTL (Right-To-Left) orientation, load the RTL CSS file after fileinput.css by uncommenting below -->
+    <!-- link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.1/css/fileinput-rtl.min.css" media="all" rel="stylesheet" type="text/css" /-->
+    <!-- the font awesome icon library if using with `fas` theme (or Bootstrap 4.x). Note that default icons used in the plugin are glyphicons that are bundled only with Bootstrap 3.x. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <!-- piexif.min.js is needed for auto orienting image files OR when restoring exif data in resized images and when you
+        wish to resize images before upload. This must be loaded before fileinput.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.1/js/plugins/piexif.min.js"
+            type="text/javascript"></script>
+    <!-- sortable.min.js is only needed if you wish to sort / rearrange files in initial preview.
+        This must be loaded before fileinput.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.1/js/plugins/sortable.min.js"
+            type="text/javascript"></script>
+    <!-- purify.min.js is only needed if you wish to purify HTML content in your preview for
+        HTML files. This must be loaded before fileinput.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.1/js/plugins/purify.min.js"
+            type="text/javascript"></script>
+    <!-- popper.min.js below is needed if you use bootstrap 4.x (for popover and tooltips). You can also use the bootstrap js
+       3.3.x versions without popper.min.js. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- bootstrap.min.js below is needed if you wish to zoom and preview file content in a detail modal
+        dialog. bootstrap 4.x is supported. You can also use the bootstrap js 3.3.x versions. -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+    <!-- the main fileinput plugin file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.1/js/fileinput.min.js"></script>
+    <!-- following theme script is needed to use the Font Awesome 5.x theme (`fas`) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.1/themes/fas/theme.min.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Zadanie</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="index.html">Domov</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" id="history" style="display: none;" href="history.html">History</a>
+                </li>
+                <li class="nav-item">
+                    <a onclick="logOut()" class="nav-link js-scroll-trigger" id="logOut" style="display: none;"
+                       href="#">LogOut</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="bg-primary text-white">
+    <div class="container text-center">
+        <h1>Welcome to Image Recognition Page</h1>
+        <p class="lead">Powered by <br> Pavol Tomko & Richard Babjak & Maroš Hliboký</p>
+    </div>
+</header>
+
+<!--<section id="about">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-8 mx-auto">-->
+<!--                <h2>About this page</h2>-->
+<!--                <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled-->
+<!--                    so you can use it as a boilerplate or starting point for you own landing page designs! This template-->
+<!--                    features:</p>-->
+<!--                <ul>-->
+<!--                    <li>Clickable nav links that smooth scroll to page sections</li>-->
+<!--                    <li>Responsive behavior when clicking nav links perfect for a one page website</li>-->
+<!--                    <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the-->
+<!--                        navbar-->
+<!--                    </li>-->
+<!--                    <li>Minimal custom CSS so you are free to explore your own unique design options</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<section id="services" class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>History</h2>
+
+                <div id="histList" class="list-group">
+                    <!--                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>-->
+                </div>
+                <script>
+                    $(document).ready(function () {
+
+
+                    });
+                </script>
+
+                <div class="row pt-5">
+                    <div class="col-12 d-flex justify-content-center" id="res-img">
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-12">
+                        <div class="card text-center" id="card1" style="display: none;">
+                            <div class="card-body">
+                                <h5 class="card-title">Labels</h5>
+                                <div id="imageLabels" class="card-text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row pt-5">
+                    <div class="col-12">
+                        <div class="card text-center" id="card2" style="display: none;">
+                            <div class="card-body">
+                                <h5 class="card-title">Objects</h5>
+                                <div id="imageObjects" class="card-text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row pt-5">
+                    <div class="col-12">
+                        <div class="card text-center" id="card3" style="display: none;">
+                            <div class="card-body">
+                                <h5 class="card-title">Similar Images</h5>
+                                <div id="similarImages" class="card-text">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+
+    $("#input-fas").fileinput({
+        theme: "fas",
+        fileActionSettings: {
+            showRemove: true,
+            showUpload: false,
+            showZoom: false,
+            showDrag: true,
+        },
+        showUpload: false,
+        // uploadUrl: "/file-upload-batch/2",
+        maxFileCount: 1,
+        allowedFileTypes: ['image'],
+        browseClass: "btn btn-outline-dark",
+    });
+
+    // $('#sendBtn').click(() => {
+    //     $("#card1").css("display", "");
+    //     $("#card2").css("display", "");
+    // });
+
+
+</script>
+<!--  <section id="contact">-->
+<!--    <div class="container">-->
+<!--      <div class="row">-->
+<!--        <div class="col-lg-8 mx-auto">-->
+<!--          <h2>Contact us</h2>-->
+<!--          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; ImageRecognition 2019 <br> Made with <i
+                style="color: red" class="fas fa-heart"></i></p>
+    </div>
+</footer>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="src/vendor/jquery/jquery.min.js"></script>
+<script src="src/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="src/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+<!-- Custom JavaScript for this theme -->
+<script src="src/js/main.js"></script>
+
+<script>
+    // Initialize Firebase
+    let config = {
+        apiKey: "AIzaSyDKCHQsl4N8ZKhAJJ_lnbGZpVY2Ma5F4W4",
+        authDomain: "cloudove-technologie.firebaseapp.com",
+        databaseURL: "https://cloudove-technologie.firebaseio.com",
+        projectId: "cloudove-technologie",
+        storageBucket: "cloudove-technologie.appspot.com",
+        messagingSenderId: "1032389130797"
+    };
+    firebase.initializeApp(config);
+</script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+
+</html>
